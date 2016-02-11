@@ -1,0 +1,43 @@
+/*----------------------------------Theme Colors Starts-------------------------------- */
+a:hover,
+a:active,
+a:focus {
+    color: #696969;
+}
+.theme-color, .hover-color:hover, .hover-color:focus, .navigation .dropdown-menu li a:hover, .navigation .dropdown-menu li a:focus,
+.breadcrumb-menubar > li > a:hover, .breadcrumb-menubar > li > a:focus{
+    color: #696969; 
+}
+.caption-text .video-icon.fa:hover, .caption-text .video-icon.fa:focus, 
+.caption-text.style-2 .theme-btn:hover, .caption-text.style-2 .theme-btn:focus, .caption-text.style-3 .theme-btn:hover, 
+.caption-text.style-3 .theme-btn:focus, .caption-text .form-group .submit-btn, .caption-text.style-3 .form-group .submit-btn{
+    background: #696969;
+}
+.theme-btn, .theme-color-bg, .login-register li a:hover, .login-register li a:focus,.theme-tabs ul li.current a,.theme-btn-1:hover, .theme-btn-1:focus,.video-icon.fa, 
+.price-box:hover .theme-btn-2,.price-box:focus .theme-btn-2,.tag-preview,
+
+.widget-wrap.tag-cloud a:hover,.widget-wrap.tag-cloud a:focus, .pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover,
+.pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .to-top,
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover,
+.post-next:hover, .post-previous:hover, .post-next:focus, .post-previous:focus, .form-submit > input[type="submit"]{
+    background-color: #696969;
+}
+.theme-btn:hover,.theme-btn:focus, .theme-btn-big:hover,.theme-btn-big:focus,
+.donation-wrap .theme-btn:hover,.donation-wrap .theme-btn:focus, .form-submit > input[type="submit"]:hover, .form-submit > input[type="submit"]:focus{
+    border-color: #696969;
+    color: #696969;
+    background-color: #fff;
+}
+
+.slider-form .submit-btn,.video-icon.fa,.price-box:hover .theme-btn-2,.price-box:focus .theme-btn-2,
+
+.title-devider .line-1, .theme-btn-1:hover, .theme-btn-1:focus,  .widget-wrap.tag-cloud a:hover,.widget-wrap.tag-cloud a:focus,
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, 
+.pagination > .active > span:focus, .pagination > .active > span:hover, .pagination > li > a:focus, .pagination > li > a:hover,
+.pagination > li > span:focus, .pagination > li > span:hover, .post-next:hover, .post-previous:hover, .post-next:focus, .post-previous:focus,.form-submit > input[type="submit"]{
+    border-color: #696969;
+}
+.theme-color-mask{
+    background: rgba(105, 105, 105,0.8);
+}
+/*------------------------Theme Colors Ends------------------------ */

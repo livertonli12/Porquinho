@@ -9,9 +9,9 @@ var mongoose   = require('./config/mongoose'),
 //Inicialização do mongodb
 var db       = mongoose();
 //Inicialização do express
-var app  = express();
+var app      = express();
 //Inicialização da autenticação
-var passport = passport();
+var pass = passport();
 
 //Inicialização do aplicativo
 app.listen(3000);

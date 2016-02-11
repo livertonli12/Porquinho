@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="app">
+  <head>
+    <title>Porquinho - Gerenciador Financeiro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css" />
+
+    <link rel="stylesheet" href="content/css/root.css" />
+  </head>
+  <body>
+
+      <div ng-controller="ShellController as shell" ng-include="shell.isLoggedOn() ? 'app/views/shell/shell.html' : 'app/views/autenticacao/formLogin.html'" />
+
+      <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+      <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+      <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+
+      <script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
+
+      <script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+      <script type="text/javascript" src="bower_components/angular-touch/angular-touch.js"></script>
+
+      <!-- Angular Configurations -->
+      <script type="text/javascript" src="app/app.js"></script>
+      <script type="text/javascript" src="app/config/config.js"></script>
+
+      <!-- Services -->
+      <script type="text/javascript" src="app/services/securityService.js"></script>
+      <script type="text/javascript" src="app/services/authService.js"></script>
+      <!-- Controllers -->
+      <script type="text/javascript" src="app/controllers/shell/shellController.js"></script>
+      <script type="text/javascript" src="app/controllers/autenticacao/autenticacaoController.js"></script>
+
+  </body>
+</html>

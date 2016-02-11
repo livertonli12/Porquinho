@@ -2,7 +2,7 @@ var passport = require('passport'),
     url = require('url'),
     FacebookStrategy = require('passport-facebook').Strategy,
     config = require('../config'),
-    users = require('../../app/controllers/users');
+    usuarios = require('../../app/controllers/usuarios.server.controller');
 
 //o terceiro método do passport encontramos logo abaixo:
 //ele é responsável por dizer ao passport a estratégia que poderá ser utilizada
@@ -32,6 +32,6 @@ module.exports = function() {
       providerData: providerData
     };
 
-    users.saveOAuthUserProfile(req, providerUserProfile, done);
+    usuarios.saveOAuthUserProfile(req, providerUserProfile, done);
   }));
 };

@@ -1,0 +1,37 @@
+
+<div class="login-form" ng-controller="AutenticacaoController as vm">
+    <form method="post" ng-submit="vm.login()">
+        <div class="top">
+            <h1>Porquinho</h1>
+            <h4>Gerenciador Financeiro</h4>
+        </div>
+
+        <div class="form-area">
+            <div class="group">
+                <input type="text" class="form-control" ng-model="vm.user.username" id="username" placeholder="Usuário" required autofocus/>
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="group">
+                <input type="password" class="form-control" ng-model="vm.user.password" id="password" placeholder="Senha" required/>
+                <i class="fa fa-key"></i>
+            </div>
+            <div class="checkbox checkbox-primary">
+                <input id="checkbox101" type="checkbox" checked>
+                <label for="checkbox101"> Lembrar de mim</label>
+            </div>
+            <button type="submit" class="btn btn-default btn-block">Logar</button>
+            <button type="button" ng-click="vm.loginFacebook()" class="btn btn-primary btn-block">Logar com Facebook</button>
+            <!--<button class="btn btn-danger btn-block">Logar com Google</button>-->
+        </div>
+    </form>
+
+    <div class="footer-links row">
+        <div class="col-xs-6">
+            <a href="#"><i class="fa fa-external-link"></i> Registre-se agora</a>
+        </div>
+        <div class="col-xs-6 text-right">
+            <a href="#"><i class="fa fa-lock"></i> Esqueci a senha</a>
+        </div>
+    </div>
+
+</div>

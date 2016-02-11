@@ -27,9 +27,8 @@ module.exports = function(){
   //---------------------------------------------------------
   //Body-Parser: utilizado para fazer o parse do json enviado no corpo das
   //requisições. Não trabalha com multipart
-  app.use(bodyParser.urlencoded({ extended:true }));
   app.use(bodyParser.json());
-
+  app.use(bodyParser.urlencoded({ extended:true }));
   //Method-override: Possibilita a utilização de verbos HTTP como:
   //PUT ou DELETE em locais que não poderiamos utilizar
   app.use(methodOverride());
@@ -41,11 +40,6 @@ module.exports = function(){
     secret: config.sessionSecret
   }));
 
-  //Definição de onde serão colocadas as views do projeto
-  app.set('views','./app/views');
-  //Definição da view engine que será utilizada.
-  app.set('view engine','ejs');
-
   //Connect-flash: Flash é uma area especial da session para armazenamento de
   //mensagens. É comumente utilizado quando desejamos que uma mensangem apareça
   //na página seguinte após um redirect
@@ -56,11 +50,28 @@ module.exports = function(){
   app.use(passport.initialize());
   app.use(passport.session());
   //---------------------------------------------------------
+  // Configurações de Rotas
+  //---------------------------------------------------------
+  require('../app/routes/usuarios.server.routes.js')(app);
+  require('../app/routes/lancamentos.server.routes.js')(app);
+  require('../app/routes/conta.server.routes.js')(app);
+  require('../app/routes/categoria.server.routes.js')(app);
+  //---------------------------------------------------------
   // Configuração de Conteúdo Estático
   // É importante respeitar a ordem na qual foi inserido
   // para que não haja lentidão no carregamento.
   //---------------------------------------------------------
-  app.use(express.static('./public'));
+  app.use(express.static('./ui-website'));
+  app.use('/admin', express.static('./ui-admin'));
+
+  app.get('*', function(req, res) {
+    res.redirect('/#' + req.originalUrl);
+  });
+
+  app.use(function(err, req, res, next){
+    console.log("Error!");
+    res.send(500, {message: err.message});
+  });
 
   return app;
 };
